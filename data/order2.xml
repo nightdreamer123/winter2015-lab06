@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE order SYSTEM 'testLab.dtd'>
+
+<order type="takeout">
+    <customer> George </customer>
+    <burger>
+        <patty type="beef"/>
+        <cheeses top="american" bottom="swiss"/>
+        <sauce type="heinzketchup"/>
+    </burger>
+    <burger>
+        <patty type="vegan"/>
+        <cheeses top="smokedgouda" bottom="smokedgouda"/>
+        <topping type="lettuce"/>
+        <topping type="tomato"/>
+    </burger>
+    <burger>
+        <patty type="turkey"/>
+        <cheeses top="importedbrie"/>
+        <topping type="rawonion"/>
+        <topping type="tomatolimesalsa"/>
+        <sauce type="fkburgersauce"/>
+    </burger>
+</order>

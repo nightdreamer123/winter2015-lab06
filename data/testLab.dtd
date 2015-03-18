@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Make your own burger
+-->
+
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+<!ELEMENT order (customer, delivery?, burger+, special?)>
+
+<!ELEMENT customer (#PCDATA)>
+
+
+<!ATTLIST order type (eatin|takeout|delivery) #REQUIRED > 
+
+
+<!ELEMENT delivery (#PCDATA)>
+
+<!ELEMENT special (#PCDATA)>
+
+<!ELEMENT burger (patty, cheeses?, topping*, sauce*, instructions?, name?)>
+
+
+<!-- this is for patty *** default is beef -->
+<!ELEMENT patty (#PCDATA)>
+<!ATTLIST patty type (beef | pork | turkey | bison | vegan ) "beef">
+
+<!-- this is for cheese -->
+<!ELEMENT cheeses EMPTY>
+<!ATTLIST cheeses
+        top (american|swiss|pepperjack|
+                blue|gruyere|smokedgouda|
+                agedcheddar|napavalleygoat|importedbrie) #IMPLIED
+        bottom (american|swiss|pepperjack|
+                blue|gruyere|smokedgouda|
+                agedcheddar|napavalleygoat|importedbrie) #IMPLIED
+>
+
+
+
+<!ELEMENT topping (#PCDATA)>
+<!ATTLIST topping
+        type (lettuce|tomato|rawonion|dillpickles|
+                roastedonions|seasonalmushroom|tomatolimesalsa|
+                thick-cutbacon|roastedgreenchilies|fkchili|
+                freshavocado|friedegg|housecuredporkbelly) #REQUIRED
+>
+
+<!ELEMENT sauce EMPTY>
+<!ATTLIST sauce
+        type (heinzketchup|ballparkmustard|hellmansmayo|fkburgersauce) #REQUIRED
+>
+
+<!ELEMENT instructions (#PCDATA)>
+
+<!ELEMENT name (#PCDATA)>
